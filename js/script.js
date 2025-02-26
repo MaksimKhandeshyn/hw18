@@ -1,11 +1,20 @@
 //--1--
-const categories = document.querySelectorAll("#animals .li-item");
+const categories = document.querySelectorAll("ul#categories");
 console.log(`У списку ${categories.length} категорії.`);
 
-console.log(categories);
+categories.forEach((category) => {
+  const title = category.querySelector("h2").textContent;
+  const itemsCount = category.querySelectorAll("li.item").length;
+  console.log(`Категорія: ${title}`);
+  console.log(`Кількість елементів: ${itemsCount}`);
+});
 
-const titleEl = document.querySelectorAll("#animals .li-item");
-
-const secondEl = document.querySelectorAll("ul li");
-console.log(secondEl);
-secondEl.forEach((element) => console.log(element));
+//--2--
+const ingredients = [
+  "Картопля",
+  "Гриби",
+  "Часник",
+  "Помідори",
+  "Зелень",
+  "Приправи",
+];
