@@ -53,10 +53,9 @@ const createTag = images.map((image) => {
   const liElement = document.createElement("li");
   const imgElement = document.createElement("img");
 
-  imgElement.innerText = image.url;
-  liElement.innerHTML = imgElement;
-  console.log(liElement);
-  console.log(imgElement);
+  imgElement.width = "300";
+  imgElement.height = "200";
+  liElement.innerHTML = `<img src="${image.url}" alt="${image.alt} width="${imgElement.width}" height=${imgElement.width}" />`;
   return liElement;
 });
 
